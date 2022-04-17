@@ -66,7 +66,7 @@ async function confirmStringInput(input) {
     if ((input.trim() != "") && (input.trim().length <= 30)) {
         return true;
     }
-    return "Invalid input. Please limit your input to 30 characters or less."
+    return "That's not gonna fly, please try again"
 };
 
 async function addEmployee() {
@@ -430,9 +430,9 @@ function runApp() {
     inquirer.prompt({
         name: "mainmenu",
         type: "list",
-        message: "What would you like to do?",
+        message: "Please select from the following",
         choices: [
-            "View All Employees",
+            "View all Employees",
             "Edit Employeee Info",
             "View Roles",
             "Edit Roles",
@@ -442,7 +442,7 @@ function runApp() {
         ]
     }).then(responses => {
         switch (responses.mainmenu) {
-            case "View All Employees":
+            case "View all Employees":
                 showEmployeeInfo();
                 break;
             case "Edit Employeee Info":
