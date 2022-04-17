@@ -423,7 +423,7 @@ function editDepartmentOptions() {
 };
 
 function endProgram() {
-    connection.end();
+    process.end();
 };
 
 function runApp() {
